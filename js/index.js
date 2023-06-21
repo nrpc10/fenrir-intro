@@ -38,7 +38,7 @@ messageForm.addEventListener('submit', function (e){
         const li = editButton.parentNode;
         // const entry = editButton.parentNode;
         if(editButton.textContent === 'edit') {
-            const span = getElementById('li)');
+            // const span = ;
             const input = document.createElement('input');
             input.type = 'text';
             input.value = span.textContent;
