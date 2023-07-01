@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-   
     <div class="wrapper">
-       
         <div class="main-nav">
-            <!-- <img src="/fenrir-intro/Images/social/np3.png" alt="Nelson Palacios logo" height="200" width="200" class="logo-image"> -->
+        <!-- <img src="/fenrir-intro/Images/social/np3.png" alt="Nelson Palacios logo" height="200" width="200" class="logo-image"> -->
+            <div>
             <ul class="nav">
                 <li><img src="/fenrir-intro/Images/Varias/Nelson-profile.jpeg" alt="Nelson Palacios" width="50" class="profile-image"></li>
                 <li class="name">Nelson Palacios</li>
@@ -22,12 +21,16 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#leave_message">Contact</a></li>
+            </ul>
+            </div>    
+            <div>
+            <ul class="nav">       
                 <li><a href="https://twitter.com/nrpc10" class="social twitter" target="_blank">Twitter</a></li>
                 <li><a href="https://www.instagram.com/nrpc10" class="social instagram" target="_blank">Instagram</a></li>
                 <li><a href="https://github.com/nrpc10" class="social github" target="_blank">Github</a></li>
             </ul>
-        </div>
-        
+            </div>
+        </div>    
         <header>
           <img src="/fenrir-intro/Images/Varias/sunset4.png" class="background">
           <img src="/fenrir-intro/Images/Varias/Houston-skyline.png" class="foreground">
@@ -44,11 +47,11 @@
             <section id="experience">
                 <h2 class="subtitle">Experiences</h2>
                 <p>I'm an aspiring web designer who loves everything about the web. I had lots of different jobs. I'm eager to bring my life experience to the process of building awesome websites.</p>
-                <p>I'm currently studying at <strong>Code the Dream</strong> to be a <em>full stack web development</em>. My current job is Valet supervisior, I've been working for the last 9 years. In the meantime I had another jobs:</p>
+                <p>I'm currently studying at <strong>Code the Dream</strong> to be a <em>full stack web development</em>. My current job is Valet supervisior, I've been working for the last 9 years. In the meantime I had another jobs like:</p>
                 <ul>
-                    <li><strong class="subtitle">Position:</strong> <em>Concierge</em> at The Parklane Highrise.</li>
-                    <li><strong class="subtitle">Position:</strong> <em>Car washer</em> at The soap car wash.</li>
-                    <li><strong class="subtitle">Position:</strong> <em>iPhone technician</em> in iPhone Tuning</li>
+                    <li><h3 id="h3">Position:</h3> <em>Concierge</em> at The Parklane Highrise.</li>
+                    <li><h3 id="h3">Position:</h3> <em>Car washer</em> at The soap car wash.</li>
+                    <li><h3 id="h3">Position:</h3> <em>iPhone technician</em> in iPhone Tuning.</li>
                 </ul>
             </section>
         
@@ -63,52 +66,51 @@
             <section id="leave_message">
             <h2 class="subtitle">Leave a Message</h2>
             <form name="leave_message">
-                <label for="usersName">Username:</label>
-                <input type="text" name="usersName" required="true"><br>
-                    
-                <label for="usersEmail">Email:</label>
-                <input type="email" name="usersEmail" required="true"><br>
-                        
-                <label for="usersMessage">Message:</label>
-                <textarea name="usersMessage" required="true"></textarea><br>
-                    
+            <div>
+                <label class="lm-label" for="usersName">Username:</label>
+                <input type="text" id="usersName" name="usersName" required="true"><br>
+            </div>
+            <div>    
+                <label class="lm-label" for="usersEmail">Email:</label>
+                <input type="email" name="usersEmail" id="usersEmail" required="true"><br>
+            </div>
+            <div>            
+                <label class="lm-label" for="usersMessage">Message:</label>
+                <textarea name="usersMessage" id="usersMessage" required="true"></textarea><br>
+            </div>        
                 <button type="submit">Submit</button>
-    
             </form>
             </section>
-    
             <section id="messages">
-    
                 <h2 class="subtitle">Messages</h2>
                 <ul>
     
                 </ul>
-    
             </section>
-    
-            </main>
-        
-        <footer>
-    
+        </main>
+        <footer>  
             <h2 class="subtitle">Connect</h2>
-    
-            <ul>
-                <li><strong>Email:</strong><a href="mailto:nrpc10@gmail.com?subject=Hi%20There!" target="_blank">nrpc10@gmail.com</a></li>
-                <li><a href="https://twitter.com/nrpc10" class="social twitter" target="_blank">Twitter</a></li>
-                <li><a href="https://www.instagram.com/nrpc10" class="social instagram" target="_blank">Instagram</a></li>
-                <li><a href="https://github.com/nrpc10" class="social github" target="_blank">Github</a></li>
-            </ul>
-            </footer>
-    
-            <footer>
+            <div class="footer-connect">
+                <div>
+                <a href="#" class="social logo">Logo</a>
+                </div>
+                <div>
+                <ul class="nav">
+                    <li><strong>Email:</strong><a href="mailto:nrpc10@gmail.com?subject=Hi%20There!" target="_blank" id="email">nrpc10@gmail.com</a></li>
+                    <li><a href="https://twitter.com/nrpc10" class=" social twitter" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/nrpc10" class="social instagram" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/nrpc10" class="social github" target="_blank">Github</a></li>
+                </ul>
+                </div>
+            </div>
+        </footer>
+        <footer id="quote">
             <hr>
-            <q class="footer-quote">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. <br>
-            And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. <br>
-            As with all matters of the heart, you'll know when you find it. <cite><a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a></cite></q>
+            <q class="footer-quote">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.
+            And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.
+            As with all matters of the heart, you'll know when you find it.  <cite><a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a></cite></q>
             <hr>
-            </footer>
-    
-
+        </footer>
         <script src="js/index.js"></script>
     </div>  
 </body>
