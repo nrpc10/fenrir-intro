@@ -3,13 +3,12 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
-    copyright.innerHTML = "Nelson Palacios &copy; " + thisYear;
-    footer.appendChild(copyright);
+copyright.innerHTML = "Nelson Palacios &copy; " + thisYear;
+footer.appendChild(copyright);
 
 let skills = ["HTML", "CSS", "JavaScript", "Web development"];
 let skillsSection = document.getElementById('skills');
 let skillsList = skillsSection.querySelector('ul');
-
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
     skill.innerHTML = skills[i];
@@ -17,7 +16,6 @@ for (let i = 0; i < skills.length; i++) {
 };
 
 let messages = document.querySelector('#messages');
-
 messages.style.display = "none";
 
 const messageForm = document.querySelector('form[name="leave_message"]');
@@ -32,7 +30,6 @@ messageForm.addEventListener('submit', function (e){
     e.preventDefault();
     messages.style.display = "";
 
-
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
@@ -43,6 +40,7 @@ messageForm.addEventListener('submit', function (e){
     const editButton = document.createElement('button');
     editButton.innerText = "edit";
     editButton.type = "button";
+
     editButton.addEventListener('click', (e) => {
         const newUsersName = messageForm.usersName;
         // const li = editButton.parentNode;
@@ -70,14 +68,14 @@ messageForm.addEventListener('submit', function (e){
     removeButton.innerText = "remove";
     removeButton.type = "button";
     removeButton.addEventListener('click', (e) => {
-    const entry = removeButton.parentNode;
-    console.log(messageList.firstChild);
-    entry.remove();
-        if (messageList.children.length === 0 ) {
-            messages.style.display = "none";
-        }
+        const entry = removeButton.parentNode;
+        console.log(messageList.firstChild);
+        entry.remove();
+            if (messageList.children.length === 0 ) {
+                messages.style.display = "none";
+            }
+    });
 
-});
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);

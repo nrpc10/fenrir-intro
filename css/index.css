@@ -293,7 +293,7 @@ a.social {
 }
 
 a.logo {
-  background-image: url(images/social/np3.png);
+  background-image: url(../images/social/np3.png);
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -307,15 +307,15 @@ a.logo:hover {
 }
 
 a.twitter {
-  background-image: url(/images/social/twitter.png);
+  background-image: url(../images/social/twitter.png);
 }
 
 a.instagram {
-  background-image: url(/images/social/instagram.png);
+  background-image: url(../images/social/instagram.png);
 }
 
 a.github {
-  background-image: url(/images/social/github.png);
+  background-image: url(../images/social/github.png);
 }
 
 li a.social:hover {
