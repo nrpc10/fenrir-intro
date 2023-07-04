@@ -44,52 +44,60 @@ body {
   transform: translateZ(-5px) scale(1.5);
 }
 
-
 /* top bar */
 
-.main-nav .nav {
+.main-nav {
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  width: 100%;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  color: aliceblue;
+  background-color: black;
 }
 
-.main-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  min-height: 30px;
-  padding: 10px;
-  position:relative;
-  text-align: center;
-  color: aliceblue;
-}
+.nav-name {
+  margin: 5px;
+  padding: 5px;
+  max-width: fit-content;
+  max-height: fit-content;
+ }
 
 .nav {
+  margin: 5px;
+  padding: 5px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   font-weight: 700;
   list-style-type: none;
-  padding: 0;
 }
 
-.nav .profile-image {
+.profile-image {
   border-radius: 50%; 
 }
 
-.nav .profile-image:hover {
+.profile-image:hover {
   transform: scale(1.2) rotate(10deg);
 }
 
-.nav .name {
- align-content: center;
-}
-
 .nav li {
-  padding: 5px 10px 10px 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 .nav a {
   transition: all 0.5s;
   gap: 20px;
 }
+
+/* .nav:hover{
+transform:scale(1.1);
+} */
 
 .nav a:hover {
   color: crimson;
@@ -107,11 +115,6 @@ header {
   transform-style: preserve-3d;
   z-index: -1;
 }
-
-main .profile-image {
-  border-radius: 50%; 
-}
-
 
 /* H1 styling */
 
@@ -144,6 +147,7 @@ main .profile-image {
   text-align: left;
   font-weight: 400;
   padding-left: 5px;
+  margin: 5px;
 }
 
 /* H3 styling */
@@ -186,8 +190,11 @@ section {
 /* Skills section */
 
 #skills {
-  display: inline-flexbox;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  max-width: fit-content;
+  max-height: fit-content;
 }
 
 #skills li {
@@ -202,60 +209,42 @@ section {
 }
     /* Form styling */
 
-
-
-form {
+#form {
   font-size: 30px;
   padding: 10px;
-  margin: 10px;
 }
 
-form .lm-label {
+.lm-label {
   font-size: 2rem;
   background-color: crimson;
   display:flex;
+  padding: 5px;
+  margin-bottom: 5px;
   justify-content: space-between;
   max-width: fit-content;
-  gap: 20px;
+  border-width: 2px;
+  color: aliceblue;
 }
 
 form label {
+  border-width: 2px;
+  border: #b393d3;
+  gap: 10px;
+}
+
+#usersName,
+#usersEmail,
+#usersMessage {
   text-shadow: 0px 0px 5px crimson, 0px 0px 10px crimson, 0px 0px 10px crimson,
   0px 0px 20px crimson;
-  border-style: solid;
-  border: #b393d3;
-  gap: 20px;
-}
-
-#leave_message {
-  padding: 10px;
-  margin-left: 5px;
-  gap: 20px;
-}
-
-#usersName {
   color: aliceblue;
+  padding: 5px;
   font-size: 2rem;
   border-style: solid;
   border-width: 5px;
   background-color: initial;
   border-color: crimson;
-}
-#usersEmail {
-  color: aliceblue;
-  font-size: 2rem;
-  border-style: solid;
-  border-width: 5px;
-  background-color: initial;
-  border-color: crimson;
-}
-#usersMessage {
-  color: aliceblue;
-  font-size: 2rem;
-  border-style: solid;
-  border-width: 5px;
-  background-color: initial;
-  border-color: crimson;
+  margin-bottom: 5px;
 }
 
 /* Messages section styling */
@@ -277,6 +266,9 @@ button {
   0px 0px 20px crimson;
   color:aliceblue;
   background-color: black;
+  padding: 5px;
+  border-color: crimson;
+  border-width: 1px;
   font-size: x-large;
 }
 
@@ -294,43 +286,49 @@ a.social {
   width: 40px;
   height: 40px;
   background-size: 40px 40px;
-  opacity: .5;
+  opacity: .8;
   transition: all .25s;
   border-radius: 50%;
   color: deeppink;
 }
 
 a.logo {
-  background-image: url(/fenrir-intro/Images/social/np3.png);
+  background-image: url(images/social/np3.png);
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 100px 100px;
+  /* opacity: 1; */
+}
+
+a.logo:hover {
+  background-blend-mode: luminosity;
   opacity: 1;
 }
 
 a.twitter {
-  background-image: url(/fenrir-intro/Images/social/twitter.png);
+  background-image: url(/images/social/twitter.png);
 }
 
 a.instagram {
-  background-image: url(/practice/practice-images/instagram.png);
+  background-image: url(/images/social/instagram.png);
 }
 
 a.github {
-  background-image: url(/fenrir-intro/Images/social/github.png);
+  background-image: url(/images/social/github.png);
 }
 
 li a.social:hover {
   background-blend-mode: luminosity;
   opacity: 1;
-  color:deeppink;
 }
 
 /* Footer style */
 
-footer {
+#footer {
   color: aliceblue;
+  padding: 5px;
+  background-color: crimson;
 }
 
 footer p {
@@ -344,12 +342,10 @@ footer p {
 .footer-quote {
   padding: inline;
   font-size: 16px;
-  background-color: crimson;
   max-width: max-content;
 }
 
 footer ul li {
-  display: inline-flex;
   list-style-type: none;
   justify-content:center;
 }
