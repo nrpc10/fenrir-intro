@@ -12,7 +12,7 @@ let skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
     skill.innerHTML = skills[i];
-    skillsSection.appendChild(skill);
+    skillsList.appendChild(skill);
 };
 
 let messages = document.querySelector('#messages');
