@@ -61,7 +61,6 @@ body {
   display: flex;
   align-items: center;
   list-style-type: none;
-  
 }
 
 .profile-image {
@@ -69,7 +68,7 @@ body {
 }
 
 .profile-image:hover {
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.9) rotate(10deg);
 }
 
 .nav li {
@@ -194,6 +193,25 @@ header {
 }
 
 #skills li {
+  margin: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: aliceblue; 
+  border-width: 5px;
+  justify-content: space-around;
+  background-color: crimson;
+  align-content: center;
+}
+
+#projects ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-content: center;
+
+}
+
+#projects li {
   margin: 10px;
   padding: 5px;
   border-style: solid;
